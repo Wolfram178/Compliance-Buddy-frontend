@@ -1,0 +1,46 @@
+/* ComplianceBuddy Extension Styles */
+
+#compliancebuddy-overlay-root {
+  all: initial;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#compliancebuddy-overlay-root * {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar for overlay */
+#compliancebuddy-overlay-root ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#compliancebuddy-overlay-root ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+#compliancebuddy-overlay-root ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+#compliancebuddy-overlay-root ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animation for overlay appearance */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#compliancebuddy-overlay-root > div {
+  animation: slideInFromRight 0.3s ease-out;
+}
